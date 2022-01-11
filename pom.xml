@@ -21,6 +21,7 @@
         <module>spring-boot-web</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-redis</module>
+        <module>basic-test</module>
     </modules>
 
     <packaging>pom</packaging>
