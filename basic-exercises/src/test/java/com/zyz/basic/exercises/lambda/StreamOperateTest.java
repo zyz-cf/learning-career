@@ -1,5 +1,7 @@
-package com.zyz.basic.exercises.stream;
+package com.zyz.basic.exercises.lambda;
 
+import cn.hutool.core.util.StrUtil;
+import com.zyz.basic.exercises.entity.Member;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -57,5 +59,23 @@ public class StreamOperateTest {
         List<Map<String, Object>> list = new ArrayList<>();
         list = Arrays.asList(map1, map2, map3);
         return list;
+    }
+
+    @Test
+    public void testOrder() {
+        OrderService orderService = () -> System.out.println("Come on order");
+        orderService.addOrder();
+        orderService.getOrder();
+        orderService.printOrder();
+    }
+
+    @Test
+    public void testMember() {
+        MemberService memberService = (memberId, memberName) -> {
+            System.out.println(StrUtil.format("add member:{}-{}", memberId, memberName));
+            return new Member(memberId, memberName);
+        };
+        memberService.addMember(1L, "zyz");
+        memberService.getMember();
     }
 }
