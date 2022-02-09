@@ -1,4 +1,4 @@
-package com.zyz.basic.exercises.lambda;
+package com.zyz.basic.exercises.service;
 
 import com.zyz.basic.exercises.entity.Member;
 

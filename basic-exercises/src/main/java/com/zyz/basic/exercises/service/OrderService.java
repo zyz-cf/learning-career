@@ -1,4 +1,4 @@
-package com.zyz.basic.exercises.lambda;
+package com.zyz.basic.exercises.service;
 
 /**
  * 排序服务

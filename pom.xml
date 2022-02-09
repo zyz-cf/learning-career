@@ -33,8 +33,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <knife4j.version>3.0.3</knife4j.version>
         <validation.version>2.0.1.Final</validation.version>
-        <mybatis-plus.version>3.5.0</mybatis-plus.version>
-        <mybatis-plus-generator.version>3.5.0</mybatis-plus-generator.version>
+        <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.1</mybatis-plus-generator.version>
+        <mybatis-plus-extension.version>3.5.0</mybatis-plus-extension.version>
+        <velocity.version>2.3</velocity.version>
         <fastjson.version>1.2.75</fastjson.version>
         <easyexcel.version>2.2.7</easyexcel.version>
         <itextpdf.version>5.5.13</itextpdf.version>
@@ -68,6 +70,16 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-generator</artifactId>
             <version>${mybatis-plus-generator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${mybatis-plus-extension.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity-engine-core</artifactId>
+            <version>${velocity.version}</version>
         </dependency>
 
         <dependency>
