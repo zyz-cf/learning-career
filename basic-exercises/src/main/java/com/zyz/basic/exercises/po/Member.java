@@ -1,4 +1,4 @@
-package com.zyz.basic.exercises.entity;
+package com.zyz.basic.exercises.po;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

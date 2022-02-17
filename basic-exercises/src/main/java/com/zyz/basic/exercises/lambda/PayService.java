@@ -1,4 +1,4 @@
-package com.zyz.basic.exercises.service;
+package com.zyz.basic.exercises.lambda;
 
 /**
  * 支付服务类

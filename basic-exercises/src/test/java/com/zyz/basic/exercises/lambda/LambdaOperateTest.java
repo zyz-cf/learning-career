@@ -1,7 +1,7 @@
-package com.zyz.basic.exercises.service;
+package com.zyz.basic.exercises.lambda;
 
 import cn.hutool.core.util.StrUtil;
-import com.zyz.basic.exercises.entity.Member;
+import com.zyz.basic.exercises.po.Member;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -53,7 +53,7 @@ public class LambdaOperateTest {
         memberService.addMember(1L, "zyz");
         memberService.getMember();
 
-        MemberService memberService1 = (memberId, memberName) -> new Member(memberId, memberName);
+        MemberService memberService1 = Member::new;
         memberService1.addMember(2L, "cf");
         memberService1.getMember();
     }

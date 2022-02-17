@@ -1,6 +1,6 @@
-package com.zyz.basic.exercises.service;
+package com.zyz.basic.exercises.lambda;
 
-import com.zyz.basic.exercises.entity.Member;
+import com.zyz.basic.exercises.po.Member;
 
 /**
  * 成员服务类
