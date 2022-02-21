@@ -16,7 +16,8 @@ import java.util.concurrent.*;
 public class AuxiliaryTest {
 
     // CountDownLatch类似于10人找了一个代购，代购收齐了10个客户的钱才买票出国购物
-    // CyclicBarrier类似10个拼团购物，人齐了之后开团了，这10个自己买自己的哈
+    // CyclicBarrier类似10个拼团购物，人齐了之后开团了，这10个自己买自己的
+    // Semaphore信号量类似停车场车位
 
     /**
      * CountDownLatch倒计时使用场景：某线程需要等待其他几个线程都执行过后才能继续执行
