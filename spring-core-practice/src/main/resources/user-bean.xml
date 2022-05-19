@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.zyz.spring.core.entity.User">
+        <property name="name" value="John Doe"/>
+        <property name="address" ref="address"/>
+        <property name="cards">
+            <map>
+                <entry key="visa" value="4111111111111111"/>
+                <entry key="mastercard" value="5555555555554444"/>
+            </map>
+        </property>
+        <property name="hobbies">
+            <list>
+                <value>coding</value>
+                <value>running</value>
+            </list>
+        </property>
+        <property name="bookList">
+            <list>
+                <value>三国演义</value>
+                <value>水浒传</value>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>金瓶梅</value>
+            </list>
+        </property>
+        <property name="friends">
+            <set>
+                <value>何军友</value>
+                <value>陈彬</value>
+                <value>李发高</value>
+            </set>
+        </property>
+        <property name="infos">
+            <props>
+                <prop key="age">18</prop>
+                <prop key="height">175</prop>
+            </props>
+        </property>
+        <property name="money">
+            <null/>
+        </property>
+    </bean>
+
+    <bean id="address" class="com.zyz.spring.core.entity.Address">
+        <property name="country" value="China"/>
+        <property name="province" value="Guang Dong"/>
+        <property name="city" value="Shen Zhen"/>
+        <property name="district" value="Fu Tian"/>
+        <property name="detail" value="兴业银行大厦205A"/>
+        <property name="zipCode" value="518000"/>
+    </bean>
+</beans>

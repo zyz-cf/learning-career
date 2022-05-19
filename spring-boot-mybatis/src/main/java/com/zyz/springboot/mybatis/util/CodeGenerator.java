@@ -66,7 +66,7 @@ public class CodeGenerator {
         // 数据源配置
         DataSourceConfig dataSourceConfig = new DataSourceConfig
                 // 驱动连接的URL、数据库连接用户名、数据库连接密码
-                .Builder("jdbc:mysql://172.17.6.189/tf_test?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai", "root", "123456")
+                .Builder("jdbc:mysql://172.17.6.189:3306/rbms_test?characterEncoding=UTF-8&useUnicode=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai", "ro_ccdb_pm_dm", "Uat#2398Rife$R")
                 // 类型转换,数据库=》JAVA类型
                 .typeConvert(new MySqlTypeConvert())
                 // 关键字处理 ,这里选取了mysql5.7文档中的关键字和保留字（含移除）
@@ -82,7 +82,7 @@ public class CodeGenerator {
                 // 排除生成的表
                 .addExclude()
                 // 对应表 sys_user
-                .addInclude("pms_invest_income")
+                .addInclude("pms_project_score_his")
                 // 表前缀
                 .addTablePrefix("pms_")
                 // 字段前缀
@@ -119,10 +119,11 @@ public class CodeGenerator {
                 .addTableFills(new Column("create_time", FieldFill.INSERT))
                 .addTableFills(new Property("updateTime", FieldFill.INSERT_UPDATE))
                 .idType(IdType.AUTO)
-                .formatFileName("%sEntity")
+                // .formatFileName("%sEntity")
+                .formatFileName("%s")
 
                 .serviceBuilder()
-                .formatServiceFileName("%sService")
+                .formatServiceFileName("I%sService")
                 .formatServiceImplFileName("%sServiceImpl")
 
                 .mapperBuilder()
@@ -130,7 +131,7 @@ public class CodeGenerator {
                 .enableBaseResultMap()
                 .enableBaseColumnList()
                 .enableMapperAnnotation()
-                .formatMapperFileName("%sDao")
+                .formatMapperFileName("%sMapper")
                 .formatXmlFileName("%sMapper")
                 .build();
 

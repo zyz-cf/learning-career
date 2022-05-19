@@ -29,5 +29,9 @@ public class RehearseDateTest {
         String logTime = ldt.format(fa);
         LocalDateTime localDateTime = LocalDateTime.parse(logTime, fa);
         System.out.println(localDateTime);
+
+        int year = localDate.getYear();
+        int monthValue = localDate.getMonthValue();
+        System.out.println("year:" + year + "month:" + monthValue);
     }
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:c="http://www.springframework.org/schema/c"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="cat" class="com.zyz.spring.core.entity.Cat" />
+    <bean id="dog" class="com.zyz.spring.core.entity.Dog" />
+
+    <bean id="people" class="com.zyz.spring.core.entity.People" p:name="tian ming" p:cat-ref="cat" p:dog-ref="dog"/>
+
+</beans>

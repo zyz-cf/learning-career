@@ -1,6 +1,7 @@
 package com.zyz.basic.exercises.stream;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -12,6 +13,7 @@ import java.util.stream.Stream;
  * @author 张易筑
  * @date 2022/1/19-17:09 星期三
  */
+@SpringBootTest
 public class StreamOperateTest {
 
     /**
