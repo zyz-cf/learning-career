@@ -16,13 +16,16 @@
 
     <modules>
         <module>basic-core</module>
+        <module>basic-exercises</module>
         <module>design-pattern</module>
         <module>algorithm-practice</module>
         <module>spring-boot-web</module>
+        <module>spring-boot-mongodb</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-redis</module>
         <module>spring-boot-drools</module>
         <module>spring-boot-activity</module>
+        <module>spring-core-practice</module>
     </modules>
 
     <packaging>pom</packaging>
