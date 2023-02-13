@@ -7,7 +7,7 @@
         <groupId>com.zyz</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>algorithm-practice</artifactId>
+    <artifactId>com.zyz.algorithm-practice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>algorithm-practice</name>
     <description>algorithm-practice</description>

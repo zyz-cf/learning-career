@@ -7,7 +7,7 @@
         <groupId>com.zyz</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.zyz</groupId>
+    <groupId>com.zyz.springboot.activity</groupId>
     <artifactId>spring-boot-activity</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-activity</name>

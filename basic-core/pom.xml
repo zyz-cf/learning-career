@@ -7,7 +7,7 @@
         <groupId>com.zyz</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.zyz</groupId>
+    <groupId>com.zyz.basic.core</groupId>
     <artifactId>basic-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>basic-core</name>

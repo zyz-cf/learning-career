@@ -3,9 +3,11 @@ package com.zyz.basic.exercises.date;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAdjusters;
 
 /**
  * Date练习
@@ -19,7 +21,11 @@ public class RehearseDateTest {
     @Test
     public void testDateConvert() {
         LocalDate localDate = LocalDate.now();
-        System.out.println(localDate);
+        System.out.println(localDate.toString());
+
+        LocalDate localDate1 = localDate.minusMonths(6);
+        System.out.println(localDate.toString());
+
 
         /*java8 (yyyyMMddHHmmss) 转 (yyyy-MM-dd HH:mm:ss)*/
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
@@ -33,5 +39,11 @@ public class RehearseDateTest {
         int year = localDate.getYear();
         int monthValue = localDate.getMonthValue();
         System.out.println("year:" + year + "month:" + monthValue);
+
+        LocalDate today = LocalDate.parse("2012-12-12", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        LocalDate monday = today.with(TemporalAdjusters.previousOrSame(DayOfWeek.MONDAY));
+        LocalDate sunday = today.with(TemporalAdjusters.nextOrSame(DayOfWeek.SUNDAY));
+
+
     }
 }

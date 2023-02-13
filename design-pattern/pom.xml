@@ -7,7 +7,7 @@
         <groupId>com.zyz</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.zyz</groupId>
+    <groupId>com.zyz.design.pattern</groupId>
     <artifactId>design-pattern</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>design-pattern</name>
