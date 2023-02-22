@@ -1,7 +1,5 @@
 package com.zyz.basic.exercises.lambda;
 
-import com.zyz.basic.exercises.po.Member;
-
 /**
  * 成员服务类
  *

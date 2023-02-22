@@ -1,4 +1,4 @@
-package com.zyz.basic.exercises.interview;
+package com.zyz.basic.exercises.reference;
 
 import java.lang.reflect.Field;
 
@@ -23,6 +23,4 @@ public class StringOperate {
         String s3 = s1.intern();
         System.out.println(s2 == s3);
     }
-
-    // 判断两个数大小
 }

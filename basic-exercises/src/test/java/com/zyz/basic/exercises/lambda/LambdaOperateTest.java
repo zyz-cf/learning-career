@@ -1,7 +1,6 @@
 package com.zyz.basic.exercises.lambda;
 
 import cn.hutool.core.util.StrUtil;
-import com.zyz.basic.exercises.po.Member;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
