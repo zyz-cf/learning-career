@@ -2,6 +2,8 @@ package com.zyz.basic.exercises.keyword;
 
 /**
  * 儿子
+ * 父静态代码块>子静态代码块>父普通代码块>父构造类>子普通代码块>子构造类
+ * 多个代码块按顺序执行，再次实例化对象，父子类的静态代码块都将不会再执行
  *
  * @author 张易筑
  * @date 2023/2/22-16:19 Wednesday

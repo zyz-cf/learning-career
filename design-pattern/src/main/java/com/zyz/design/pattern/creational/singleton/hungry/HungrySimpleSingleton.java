@@ -1,4 +1,4 @@
-package com.zyz.design.pattern.creational.singleton;
+package com.zyz.design.pattern.creational.singleton.hungry;
 
 /**
  * 饿汉式-简单单例模式
@@ -16,7 +16,7 @@ public class HungrySimpleSingleton {
     // 2、私有构造方法
     private HungrySimpleSingleton() {}
 
-    // 3、公有方法获取
+    // 3、公有方法获取实例
     public static HungrySimpleSingleton getInstance() {
         return singleton;
     }

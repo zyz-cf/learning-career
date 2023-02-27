@@ -1,4 +1,4 @@
-package com.zyz.design.pattern.creational.singleton;
+package com.zyz.design.pattern.creational.singleton.lazy;
 
 /**
  * 懒汉式-简单单例模式
@@ -12,12 +12,12 @@ package com.zyz.design.pattern.creational.singleton;
 public class LazySimpleSingleton {
 
     // 1、私有成员变量
-    private static LazySimpleSingleton singleton = null;
+    private static LazySimpleSingleton singleton;
 
     // 2、私有构造方法
     private LazySimpleSingleton() {}
 
-    // 3、公共获取实例方法
+    // 3、公有方法获取实例
     public static LazySimpleSingleton getInstance() {
         // 多个线程同时调用，可能会创建多个对象
         if (singleton == null) {
