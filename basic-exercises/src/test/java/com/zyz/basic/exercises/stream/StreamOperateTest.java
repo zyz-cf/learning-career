@@ -65,6 +65,21 @@ public class StreamOperateTest {
 
     @Test
     public void testStreamOperate() {
+        List<String> a = new ArrayList<>();
+        a.add("A");
+        a.add("B");
+        a.add("C");
+        a.add("D");
+        a.add("E");
+
+        List<String> b = new ArrayList<>();
+        b.add("A");
+        b.add("B");
+        b.add("C");
+
+        List<String> collect = a.stream().filter(item -> !b.contains(item)).collect(Collectors.toList());
+        System.out.println(collect);
+
         List<Map<String, Object>> list = list();
         // list.stream().filter(stu->stu.get("sex").equals("男")).collect(Collectors.toList()).forEach(System.out::println);
 

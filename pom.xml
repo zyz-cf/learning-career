@@ -23,6 +23,7 @@
         <module>spring-boot-mongodb</module>
         <module>spring-boot-mybatis</module>
         <module>spring-boot-redis</module>
+        <module>spring-boot-kafka</module>
         <module>spring-boot-drools</module>
         <module>spring-boot-activity</module>
         <module>spring-core-practice</module>
@@ -36,16 +37,17 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <knife4j.version>3.0.3</knife4j.version>
         <validation.version>2.0.1.Final</validation.version>
-        <mybatis-plus.version>3.5.1</mybatis-plus.version>
-        <mybatis-plus-generator.version>3.5.1</mybatis-plus-generator.version>
-        <mybatis-plus-extension.version>3.5.1</mybatis-plus-extension.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.5.3.1</mybatis-plus-generator.version>
+        <mybatis-plus-extension.version>3.5.3.1</mybatis-plus-extension.version>
         <velocity.version>2.3</velocity.version>
-        <fastjson.version>1.2.75</fastjson.version>
-        <easyexcel.version>2.2.7</easyexcel.version>
-        <itextpdf.version>5.5.13</itextpdf.version>
+        <fastjson.version>1.2.83</fastjson.version>
+        <easyexcel.version>3.2.1</easyexcel.version>
+        <itextpdf.version>5.5.13.3</itextpdf.version>
         <itext-asian.version>5.2.0</itext-asian.version>
         <guava.version>31.0.1-jre</guava.version>
-        <hultool.version>5.7.19</hultool.version>
+        <hultool.version>5.8.11</hultool.version>
+        <mysql.version>8.0.28</mysql.version>
     </properties>
 
     <dependencies>
@@ -61,6 +63,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -95,6 +98,12 @@
             <groupId>com.alibaba</groupId>
             <artifactId>easyexcel</artifactId>
             <version>${easyexcel.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.commons</groupId>
+                    <artifactId>commons-compress</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
         <dependency>
