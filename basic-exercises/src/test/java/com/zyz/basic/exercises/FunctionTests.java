@@ -1,4 +1,4 @@
-package com.zyz.basic.exercises.function;
+package com.zyz.basic.exercises;
 
 import org.junit.jupiter.api.Test;
 

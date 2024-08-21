@@ -1,4 +1,4 @@
-package com.zyz.basic.exercises.decimal;
+package com.zyz.basic.exercises;
 
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.StrUtil;

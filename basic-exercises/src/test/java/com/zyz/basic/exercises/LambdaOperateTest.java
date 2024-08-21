@@ -1,6 +1,10 @@
-package com.zyz.basic.exercises.lambda;
+package com.zyz.basic.exercises;
 
 import cn.hutool.core.util.StrUtil;
+import com.zyz.basic.exercises.lambda.Member;
+import com.zyz.basic.exercises.lambda.MemberService;
+import com.zyz.basic.exercises.lambda.OrderService;
+import com.zyz.basic.exercises.lambda.PayService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

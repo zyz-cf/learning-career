@@ -1,5 +1,6 @@
-package com.zyz.basic.exercises.date;
+package com.zyz.basic.exercises;
 
+import cn.hutool.core.util.ObjectUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -73,6 +74,9 @@ public class RehearseDateTest {
 
     @Test
     public void test() {
+        Object o = new Object();
+        System.out.println(ObjectUtil.isEmpty(o));
+
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Map<String, String> condition = new HashMap<>();
         Calendar calendar = Calendar.getInstance();
@@ -84,7 +88,7 @@ public class RehearseDateTest {
     }
 
     @Test
-    public static void dayOfQuarter(String[] args) {
+    public void dayOfQuarter() {
         LocalDate nowDate = LocalDate.now();
 
         System.out.println("本年第一天:" + nowDate.with(TemporalAdjusters.firstDayOfYear()));

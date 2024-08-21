@@ -1,5 +1,6 @@
-package com.zyz.basic.exercises.stream;
+package com.zyz.basic.exercises;
 
+import com.alibaba.fastjson.JSON;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -65,19 +66,30 @@ public class StreamOperateTest {
 
     @Test
     public void testStreamOperate() {
+
+        JSON.parseArray("");
+
+
         List<String> a = new ArrayList<>();
         a.add("A");
         a.add("B");
         a.add("C");
         a.add("D");
         a.add("E");
+        a.add("1");
 
         List<String> b = new ArrayList<>();
         b.add("A");
         b.add("B");
         b.add("C");
 
-        List<String> collect = a.stream().filter(item -> !b.contains(item)).collect(Collectors.toList());
+        List<Long> c = new ArrayList<>();
+        c.add(1L);
+        c.add(2L);
+        c.add(3L);
+        System.out.println(c.contains("1"));
+
+        List<String> collect = a.stream().filter(item -> b.contains(item)).collect(Collectors.toList());
         System.out.println(collect);
 
         List<Map<String, Object>> list = list();
@@ -119,4 +131,5 @@ public class StreamOperateTest {
         map3.put("sex", "男");
         return Arrays.asList(map1, map2, map3);
     }
+
 }

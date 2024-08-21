@@ -1,4 +1,4 @@
-package com.zyz.algorithm.practice;
+package com.zyz.algorithm.practice.queue;
 
 import java.util.PriorityQueue;
 
@@ -14,6 +14,7 @@ public class MedianUtil {
      * 大顶堆，存储左半边元素 （需重写比较器）
      **/
     private final PriorityQueue<Double> left = new PriorityQueue<>((o1, o2) -> (int) (o2 - o1));
+
     /**
      * 小顶堆，存储右半边元素，并且右半边元素都大于左半边
      **/
@@ -36,14 +37,14 @@ public class MedianUtil {
             // 在要把数据插入最小堆的时候，如果该数比最大堆的一些数还要小
             // 那么需要先插入最大堆，把最大堆的最大值拿出来出入到最小堆
             // 反之亦然
-            if (right.size() != 0 && num < right.peek()) {
+            if (!right.isEmpty() && num < right.peek()) {
                 left.add(num);
                 right.add(left.poll());
             } else {
                 right.add(num);
             }
         } else {
-            if (left.size() != 0 && num > left.peek()) {
+            if (!left.isEmpty() && num > left.peek()) {
                 right.add(num);
                 left.add(right.poll());
             } else {
