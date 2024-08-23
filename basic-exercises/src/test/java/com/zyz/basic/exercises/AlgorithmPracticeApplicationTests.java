@@ -1,6 +1,8 @@
 package com.zyz.basic.exercises;
 
 import com.zyz.algorithm.practice.search.SearchAlgorithm;
+import com.zyz.algorithm.practice.tree.BinaryTreeAlgorithm;
+import com.zyz.algorithm.practice.tree.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -23,7 +25,6 @@ class AlgorithmPracticeApplicationTests {
         Assertions.assertEquals(-1, SearchAlgorithm.binarySearchBasic(nums, 100));
     }
 
-
     @Test
     @DisplayName("验证正常能找到的二分查找优化情况通过")
     public void testBinarySearchOptimize() {
@@ -38,6 +39,30 @@ class AlgorithmPracticeApplicationTests {
         Assertions.assertEquals(-1, SearchAlgorithm.binarySearchBasic(nums, 100));
     }
 
+    @Test
+    @DisplayName("验证二叉树高度算法成功")
+    public void testBinaryTreeHeight() {
+        TreeNode one = new TreeNode(1);
+        TreeNode two = new TreeNode(2);
+        TreeNode three = new TreeNode(3);
+        TreeNode four = new TreeNode(4);
+        TreeNode five = new TreeNode(5);
+        TreeNode six = new TreeNode(6);
+        TreeNode seven = new TreeNode(7);
+        TreeNode eight = new TreeNode(8);
 
+        one.left = two;
+        one.right = three;
 
+        two.left = four;
+        two.right = five;
+
+        three.left = six;
+        three.right = seven;
+
+        four.left = eight;
+
+        Assertions.assertEquals(4, BinaryTreeAlgorithm.treeHeight(one));
+
+    }
 }

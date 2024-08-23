@@ -3,6 +3,7 @@ package com.zyz.basic.exercises;
 import cn.hutool.core.util.ObjectUtil;
 import cn.hutool.json.JSONUtil;
 import com.zyz.basic.exercises.vo.CompanyRatingSortVO;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -18,6 +19,18 @@ import java.util.stream.Collectors;
  */
 @SpringBootTest
 public class StrTests {
+
+    @Test
+    @DisplayName("测试基本数据类型通过")
+    public void testBasicDataType() {
+        System.out.println("byte : " + Byte.class + " Size : " + Byte.SIZE + " MaxSize : " + Byte.MAX_VALUE + " MinSize : " + Byte.MIN_VALUE);
+        System.out.println("char : " + Character.class + " Size : " + Character.SIZE + " MaxSize : " + Character.MAX_VALUE + " MinSize : " + Character.MIN_VALUE);
+        System.out.println("short : " + Short.class + " Size : " + Short.SIZE + " MaxSize : " + Short.MAX_VALUE + " MinSize : " + Short.MIN_VALUE);
+        System.out.println("int : " + Integer.class + " Size : " + Integer.SIZE + " MaxSize : " + Integer.MAX_VALUE + " MinSize : " + Integer.MIN_VALUE);
+        System.out.println("long : " + Long.class + " Size : " + Long.SIZE + " MaxSize : " + Long.MAX_VALUE + " MinSize : " + Long.MIN_VALUE);
+        System.out.println("float : " + Float.class + " Size : " + Float.SIZE + " MaxSize : " + Float.MAX_VALUE + " MinSize : " + Float.MIN_VALUE);
+        System.out.println("double : " + Double.class + " Size : " + Double.SIZE + " MaxSize : " + Double.MAX_VALUE + " MinSize : " + Double.MIN_VALUE);
+    }
 
     @Test
     public void strTest() {
