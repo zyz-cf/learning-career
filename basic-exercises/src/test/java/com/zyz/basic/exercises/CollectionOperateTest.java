@@ -1,15 +1,26 @@
-package com.zyz.basic.exercises.collection;
+package com.zyz.basic.exercises;
 
 import com.alibaba.fastjson.JSON;
+import com.zyz.basic.exercises.vo.RiskFinanceExcelVO;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CollectionMain {
+/**
+ * <p> 集合类测试 </p>
+ *
+ * @author: 张易筑
+ * @since: 2024/8/26 - 15:07
+ */
+@SpringBootTest
+public class CollectionOperateTest {
 
-    public static void main(String[] args) {
+	@Test
+    public void testMapToJson() {
         List<RiskFinanceExcelVO> riskFinanceExcels = new ArrayList<>();
 
         RiskFinanceExcelVO vo1 = new RiskFinanceExcelVO();
@@ -33,11 +44,10 @@ public class CollectionMain {
             map.put(item.getMajorIndex(), item);
         });
         System.out.println(map);
-        String jsonString1 = JSON.toJSONString(map);
+        String jsonMapString = JSON.toJSONString(map);
+        System.out.println(jsonMapString);
 
-
-        String jsonString = JSON.toJSONString(riskFinanceExcels);
-        System.out.println(jsonString);
-
+        String jsonListString = JSON.toJSONString(riskFinanceExcels);
+        System.out.println(jsonListString);
     }
 }

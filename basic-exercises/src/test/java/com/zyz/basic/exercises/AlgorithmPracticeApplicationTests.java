@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AlgorithmPracticeApplicationTests {
+public class AlgorithmPracticeApplicationTests {
 
     @Test
     @DisplayName("验证正常能找到的二分查找情况通过")
@@ -63,6 +63,51 @@ class AlgorithmPracticeApplicationTests {
         four.left = eight;
 
         Assertions.assertEquals(4, BinaryTreeAlgorithm.treeHeight(one));
+        Assertions.assertEquals(4, BinaryTreeAlgorithm.treeWeight(one));
+    }
+
+    @Test
+    @DisplayName("验证二叉树层次遍历算法成功")
+    public void testBinaryTreeLevelTraversal() {
+        TreeNode one = new TreeNode(1);
+        TreeNode two = new TreeNode(2);
+        TreeNode three = new TreeNode(3);
+        TreeNode four = new TreeNode(4);
+        TreeNode five = new TreeNode(5);
+        TreeNode six = new TreeNode(6);
+        TreeNode seven = new TreeNode(7);
+        TreeNode eight = new TreeNode(8);
+        TreeNode nine = new TreeNode(9);
+
+        one.left = two;
+        one.right = three;
+
+        two.left = four;
+        two.right = five;
+
+        three.left = six;
+        three.right = seven;
+
+        four.left = eight;
+        four.right = nine;
+
+        System.out.print("层次遍历：");
+        BinaryTreeAlgorithm.treeLevelTraversal(one);
+        System.out.println();
+        System.out.println("广度优先遍历：" + BinaryTreeAlgorithm.treeLevelTraversalImprove(one));
+        System.out.println("蛇形遍历：" + BinaryTreeAlgorithm.treeLevelZigzagLevelOrder(one));
+        System.out.print("深度优先遍历：");
+        BinaryTreeAlgorithm.treeDFSTraversal(one);
+        System.out.println();
+        System.out.print("前序遍历：");
+        BinaryTreeAlgorithm.treePreOrderTraversal(one);
+        System.out.println();
+        System.out.print("中序遍历：");
+        BinaryTreeAlgorithm.treeMidOrderTraversal(one);
+        System.out.println();
+        System.out.print("后续遍历：");
+        BinaryTreeAlgorithm.treePostOrderTraversal(one);
+
 
     }
 }
