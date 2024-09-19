@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class AlgorithmPracticeApplicationTests {
+public class SearchAlgorithmTest {
 
     @Test
     @DisplayName("验证正常能找到的二分查找情况通过")

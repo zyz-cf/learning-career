@@ -50,4 +50,19 @@ public class CollectionOperateTest {
         String jsonListString = JSON.toJSONString(riskFinanceExcels);
         System.out.println(jsonListString);
     }
+
+    @Test
+    public void testHashMap() {
+        Map<String, String> map = new HashMap<>();
+        map.put("K1", "V1");
+        String mapV = map.put("K1", "V2");
+        System.out.println(mapV);
+        System.out.println(map.get("K1"));
+
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("K1", "V1");
+        String map2V = map2.putIfAbsent("K1", "V2");
+        System.out.println(map2V);
+        System.out.println(map2.get("K1"));
+    }
 }

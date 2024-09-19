@@ -40,6 +40,7 @@
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <mybatis-plus-generator.version>3.5.3.1</mybatis-plus-generator.version>
         <mybatis-plus-extension.version>3.5.3.1</mybatis-plus-extension.version>
+        <mybatis-dynamic-datasource.version>4.3.0</mybatis-dynamic-datasource.version>
         <velocity.version>2.3</velocity.version>
         <fastjson.version>1.2.83</fastjson.version>
         <easyexcel.version>3.2.1</easyexcel.version>
@@ -83,9 +84,26 @@
             <version>${mybatis-plus-extension.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>${mybatis-dynamic-datasource.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
             <version>${velocity.version}</version>
+        </dependency>
+
+        <dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.4</version>
+		</dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.16.1</version>
         </dependency>
 
         <dependency>
